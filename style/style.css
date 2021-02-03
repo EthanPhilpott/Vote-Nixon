@@ -12,27 +12,35 @@
           box-sizing: border-box;
 }
 
-body header h1 {
-  font-size: 5px;
-}
-
-body main .opening {
+html body main .opening {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 100vh;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
-body main .opening img {
-  width: 75px;
-  height: 75px;
+html body main .opening img {
+  width: 350px;
+  height: 350px;
   border-radius: 50%;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  -webkit-transition: all .5s;
+  transition: all .5s;
 }
 
-body main .opening h2 {
-  font-size: 25px;
+html body main .opening h2 {
+  font-size: 100px;
+  width: 200px;
+  -webkit-transition: all .5s;
+  transition: all .5s;
 }
 
-body main .opening * {
+html body main .opening * {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -47,13 +55,37 @@ body main .opening * {
       -ms-flex-pack: center;
           justify-content: center;
   width: 50vw;
+  position: relative;
+  font-family: 'Teko', sans-serif;
+  -webkit-transition: all .5s;
+  transition: all .5s;
 }
 
-body main .opening .nixon {
-  background-color: blue;
+html body main .opening *:hover img {
+  width: 375px;
+  height: 375px;
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
 }
 
-body main .opening .obama {
-  background-color: red;
+html body main .opening .nixon {
+  background: linear-gradient(135deg, #91d8f1, #58b8db);
+}
+
+html body main .opening .nixon .nixon-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+html body main .opening .obama {
+  background: linear-gradient(135deg, #ff7585, #e05566);
+}
+
+html body main .opening .obama .obama-img {
+  width: 375px;
 }
 /*# sourceMappingURL=style.css.map */

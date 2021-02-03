@@ -1,3 +1,8 @@
+$blue: #58b8db
+$blue-shine: #91d8f1
+$red: #e05566
+$red-shine: #ff7585
+    
 *
     margin: 0
     padding: 0
@@ -8,29 +13,43 @@
         padding: 0
         box-sizing: border-box
 
-body
-    header 
-        h1
-            font-size: 5px
-
-    main
-        .opening
-            display: flex
-            img
-                width: 75px
-                height: 75px
-                border-radius: 50%
-            h2
-                font-size: 25px
-            *
+html 
+    body
+        main
+            .opening
                 display: flex
-                flex-direction: column
-                align-items: center
-                justify-content: center
-                width: 50vw
-            .nixon
-                background-color: blue
-            .obama
-                background-color: red
-
-
+                height: 100vh
+                user-select: none
+                img
+                    width: 350px
+                    height: 350px
+                    border-radius: 50%
+                    filter: grayscale(100%)
+                    transition: all .5s
+                h2
+                    font-size: 100px
+                    width: 200px
+                    transition: all .5s
+                *
+                    display: flex
+                    flex-direction: column
+                    align-items: center
+                    justify-content: center
+                    width: 50vw
+                    position: relative
+                    font-family: 'Teko', sans-serif
+                    transition: all .5s
+                    &:hover
+                        img
+                            width: 375px
+                            height: 375px
+                            filter: grayscale(0%)
+                .nixon
+                    background: linear-gradient(135deg, $blue-shine, $blue)
+                    .nixon-img
+                        display: flex
+                        justify-content: center
+                .obama
+                    background: linear-gradient(135deg, $red-shine, $red)
+                    .obama-img
+                        width: 375px

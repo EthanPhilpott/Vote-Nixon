@@ -1,0 +1,36 @@
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+    &::before, &::after
+        margin: 0
+        padding: 0
+        box-sizing: border-box
+
+body
+    header 
+        h1
+            font-size: 5px
+
+    main
+        .opening
+            display: flex
+            img
+                width: 75px
+                height: 75px
+                border-radius: 50%
+            h2
+                font-size: 25px
+            *
+                display: flex
+                flex-direction: column
+                align-items: center
+                justify-content: center
+                width: 50vw
+            .nixon
+                background-color: blue
+            .obama
+                background-color: red
+
+

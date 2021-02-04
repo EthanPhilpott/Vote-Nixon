@@ -39,9 +39,34 @@ function NextLine () {
             }, READING_SPEED);
             break;
         case 'pause':
-            setTimeout(() => {index++; inProcess = false;}, si.value);
+            setTimeout(() => {
+                index++; 
+                inProcess = false;
+            }, si.value)
             break;
-        // Add more events
+        case 'fadeText':
+            fadeBox.style.opacity = 0;
+            setTimeout(() => {
+                index++;
+                inProcess = false;
+            }, 500 + si.autoPlayPause);
+            break;
+        case 'revealText':
+            speaker.innerHTML = si.value;
+            fadeBox.style.opacity = 1;
+            setTimeout(() => {
+                index++;
+                inProcess = false
+            }, 500 + si.autoPlayPause);
+            break;
+        case 'choice':
+            inProcess = false;
+            index++;
+            break;
+        default:
+            inProcess = false;
+            index++;
+            break;
     }
 }
 
@@ -57,12 +82,12 @@ class Line {
 }
 
 let script = [
-    new Line ('text', 'Culpa', 1000),
+    new Line ('text', "I'm off to my first day of school at ", 1000),
     new Line ('text', 'Enim', 1000),
-    new Line ("pause", 100000),
-    new Line ("choice", ["Hello", "World", "Nerd"]),
+    new Line ("pause", 1000),
     new Line ("fadeText", null, 500),
-    new Line ('revealText', 'speaker', 500)
+    new Line ('revealText', 'You', 500)
 ]
+
 
 

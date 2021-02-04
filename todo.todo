@@ -1,0 +1,19 @@
+Requirements:
+    ✔ A landing page where you can choose between the 2 candidates. @done(21-02-04 13:25)
+    ☐ An on page load event 
+    ✔ A mouse move event listener @done(21-02-04 13:25)
+    ✔ An onclick event listener @done(21-02-04 13:25)
+    ☐ A context menu event
+    ☐ A mouse over event listener and a mouse leave event listener
+    ✔ An object that moves around the page using clientX and clientY @done(21-02-04 13:25)
+    ☐ Using “this” for on clicks
+    ☐ A loop that will create several elements at once
+    ☐ Adding event listeners AND removing event listeners 
+    ✔ A custom cursor either sometimes or always visible @done(21-02-04 13:25)
+Others:
+    ✔ Add text scrolling @done(21-02-04 13:32)
+    ✔ Add abilty for multiple speakers @done(21-02-04 13:33)
+    ☐ Add voice acting @low
+    ☐ Add Characters @critical 
+    ☐ Add a system for branching paths
+    ☐ 

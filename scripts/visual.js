@@ -2,6 +2,7 @@
 
 const READING_SPEED = 250 / 10
 let inProcess = false;
+let autoPlay = false;
 
 window.addEventListener('click', () => {
     if (!inProcess) NextLine()

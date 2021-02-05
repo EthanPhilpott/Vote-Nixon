@@ -26,6 +26,10 @@
   pointer-events: none;
 }
 
+.choice {
+  padding: 3vh;
+}
+
 body main {
   width: 100vw;
   height: 100vh;

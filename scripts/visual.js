@@ -74,19 +74,46 @@ let line = 0;
 let index = 0;
 
 class Line {
-    constructor (type, value, autoPlayPause=0) {
-        this.type = type;
+    constructor (value, autoPlayPause, target) {
         this.value = value;
+        this.target = target;
         this.autoPlayPause = autoPlayPause;
+    }
+    Execute () {
+        if (typeof this.value === "string") {
+            let id = setInterval(() => {
+                if (i >= si.value.length) {
+                    if (autoPlay) {
+                        setTimeout(() => {
+                            index++;
+                            inProcess = false
+                        }, si.autoPlayPause);
+                    } else {
+                        index++;
+                        inProcess = false
+                    }
+                    clearInterval(id);
+                } else {
+                    WriteLetter(this.value[i])
+                    i++
+                }
+            }, READING_SPEED);
+        } else if () {
+
+        }
+        this.Kill();
+    }
+    Kill () {
+        this.target.Execute()
     }
 }
 
-let script = [
-    new Line ('text', "I'm off to my first day of school at ", 1000),
-    new Line ('text', 'Enim', 1000),
-    new Line ("pause", 1000),
-    new Line ("fadeText", null, 500),
-    new Line ('revealText', 'You', 500)
+
+
+const SCRIPT = [
+    new Line ("Hello World", 1000, 
+        new Line ("Nerd", null)
+    )   
 ]
 
 

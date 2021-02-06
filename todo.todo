@@ -13,7 +13,6 @@ Requirements:
 Others:
     ✔ Add text scrolling @done(21-02-04 13:32)
     ✔ Add abilty for multiple speakers @done(21-02-04 13:33)
-    ☐ Add voice acting @low
-    ☐ Add Characters @critical 
-    ☐ Add a system for branching paths
-    ☐ 
+    ☐ Add voice acting
+    ☐ Add Characters 
+    ✔ Add a system for branching paths @done(21-02-06 14:15)

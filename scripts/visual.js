@@ -66,10 +66,12 @@ FormTreeStruct()
 // EXE
 
 function ReadLine (line) {
+    canClick = false;
     let letterIndex = 0;
     let id = setInterval (() => {
         if (letterIndex >= line.length) {
             clearInterval (id)
+            canClick = true;
         } else {
             WriteLetter(line[letterIndex])
             letterIndex++;
@@ -78,14 +80,20 @@ function ReadLine (line) {
 }
 
 function Choose () {
-    console.log(this.value)
-    this.removeEventListener('click', Choose)
+    currTree = currTree.children[this.value];
+    scriptArrIndex = 0;
+    for (let child of [...choiceBox.children]) {
+        child.removeEventListener('click', Choose)
+        child.remove()
+    }
+    canClick = true;
 }
 
 function Choice (children) {
-    let i = 0;
+    canClick = false;
     for (let child = 0; child < children.length; child++) {
         let option = AddClasses(document.createElement('div'), ['choice']);
+        option.value = child;
         option.innerHTML = `<p>${children[child].choice}</p>`;
         option.value = child;
         option.addEventListener('click', Choose)
@@ -93,17 +101,19 @@ function Choice (children) {
     }
 }
 
-function Recur (tree) {
-    let scriptArr = tree.script.split('\n'); 
-    let scriptArrIndex = 0;
-    window.addEventListener('click', () => {
-        if (scriptArr.length - 1 < scriptArrIndex) Choice(tree.children)
+let currTree = treeRoot
+let scriptArrIndex = 0;
+let canClick = true;
+
+window.addEventListener('click', () => {
+    if (canClick) {
+        let scriptArr = currTree.script.split('\n'); 
+        if (scriptArr.length - 1 < scriptArrIndex) Choice(currTree.children)
         else {
             textBody.innerHTML = '';
             ReadLine (scriptArr[scriptArrIndex])
             scriptArrIndex++;
         }
-    })
-}
-Recur(treeRoot);
+    } 
+})
 

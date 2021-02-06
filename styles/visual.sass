@@ -28,8 +28,18 @@ $pure-white: #fff
     pointer-events: none;
 
 .choice
-    padding: 3vh 30vw
+    height: 75px
     background-color: $pink
+    border-radius: 10px
+    display: flex
+    justify-content: center
+    align-items: center
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px
+    color: $white
+    &:hover
+        background-color: $pink-highlight
+
 
 body
     main
@@ -94,3 +104,11 @@ body
                                 justify-content: center
                                 &:hover
                                     background-color: $pink-highlight
+            .choice-box
+                grid-row: 1 / 2
+                grid-column: 1 / 2
+                padding: 0 30vw
+                display: flex
+                flex-direction: column
+                gap: 10px
+                justify-content: center

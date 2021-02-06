@@ -6,9 +6,9 @@ Requirements:
     ☐ A context menu event
     ☐ A mouse over event listener and a mouse leave event listener
     ✔ An object that moves around the page using clientX and clientY @done(21-02-04 13:25)
-    ☐ Using “this” for on clicks
-    ☐ A loop that will create several elements at once
-    ☐ Adding event listeners AND removing event listeners 
+    ✔ Using “this” for on clicks @done(21-02-05 17:31)
+    ✔ A loop that will create several elements at once @done(21-02-05 17:12)
+    ✔ Adding event listeners AND removing event listeners @done(21-02-05 17:31)
     ✔ A custom cursor either sometimes or always visible @done(21-02-04 13:25)
 Others:
     ✔ Add text scrolling @done(21-02-04 13:32)

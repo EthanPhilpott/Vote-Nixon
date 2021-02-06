@@ -77,10 +77,19 @@ function ReadLine (line) {
     }, READING_SPEED)
 }
 
+function Choose () {
+    console.log(this.value)
+    this.removeEventListener('click', Choose)
+}
+
 function Choice (children) {
-    for (let child of children) {
+    let i = 0;
+    for (let child = 0; child < children.length; child++) {
         let option = AddClasses(document.createElement('div'), ['choice']);
-        option.innerHTML = child.choice
+        option.innerHTML = `<p>${children[child].choice}</p>`;
+        option.value = child;
+        option.addEventListener('click', Choose)
+        choiceBox.appendChild(option);
     }
 }
 
@@ -97,8 +106,4 @@ function Recur (tree) {
     })
 }
 Recur(treeRoot);
-
-
-
-
 

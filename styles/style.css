@@ -17,6 +17,37 @@ html body {
   background-size: cover;
 }
 
+html body .popup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99;
+  display: none;
+}
+
+html body .popup p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  width: 300px;
+  height: 50px;
+}
+
 html body main .opening {
   display: -webkit-box;
   display: -ms-flexbox;

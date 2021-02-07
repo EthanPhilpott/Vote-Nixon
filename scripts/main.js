@@ -50,4 +50,14 @@ function FadeOpening () {
         child.style.display = "none";
         child.style.display = "none";
     }
+    window.location.href = "visual.html";
 }
+
+const niceTry = new Audio ("audio/nicetry.mp3")
+window.addEventListener('load', () => {
+    popup.style.display = "flex";
+})
+
+popup.addEventListener ('click', () => {
+    popup.style.display = "none"
+})

@@ -1,5 +1,11 @@
 "use strict"
 
+const nicetry = new Audio ("audio/nicetry.mp3")
+
+auto.addEventListener('click', () => {
+    nicetry.play()
+})
+
 // Major props to this article for the tree structure
 // https://typeofnan.dev/an-easy-way-to-build-a-tree-with-object-references/
 
@@ -116,4 +122,6 @@ window.addEventListener('click', () => {
         }
     } 
 })
+
+document.body.addEventListener('contextmenu', (e) => {e.preventDefault()})
 

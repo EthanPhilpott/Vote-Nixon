@@ -1,18 +1,19 @@
-Requirements:
-    ✔ A landing page where you can choose between the 2 candidates. @done(21-02-04 13:25)
-    ✔ An on page load event @done(21-02-06 17:01)
-    ✔ A mouse move event listener @done(21-02-04 13:25)
-    ✔ An onclick event listener @done(21-02-04 13:25)
-    ✔ A context menu event @done(21-02-06 14:31)
-    ☐  A mouse over event listener and a mouse leave event listener
-    ✔ An object that moves around the page using clientX and clientY @done(21-02-04 13:25)
-    ✔ Using “this” for on clicks @done(21-02-05 17:31)
-    ✔ A loop that will create several elements at once @done(21-02-05 17:12)
-    ✔ Adding event listeners AND removing event listeners @done(21-02-05 17:31)
-    ✔ A custom cursor either sometimes or always visible @done(21-02-04 13:25)
-Others:
-    ✔ Add text scrolling @done(21-02-04 13:32)
-    ✔ Add abilty for multiple speakers @done(21-02-04 13:33)
-    ✘ Add voice acting @cancelled(21-02-06 17:53)
-    ☐ Add Characters 
-    ✔ Add a system for branching paths @done(21-02-06 14:15)
+Project:
+    Requirements:
+        ✔ A landing page where you can choose between the 2 candidates. @done(21-02-04 13:25)
+        ✔ An on page load event @done(21-02-06 17:01)
+        ✔ A mouse move event listener @done(21-02-04 13:25)
+        ✔ An onclick event listener @done(21-02-04 13:25)
+        ✔ A context menu event @done(21-02-06 14:31)
+        ✔  A mouse over event listener and a mouse leave event listener @done(21-02-07 18:18)
+        ✔ An object that moves around the page using clientX and clientY @done(21-02-04 13:25)
+        ✔ Using “this” for on clicks @done(21-02-05 17:31)
+        ✔ A loop that will create several elements at once @done(21-02-05 17:12)
+        ✔ Adding event listeners AND removing event listeners @done(21-02-05 17:31)
+        ✔ A custom cursor either sometimes or always visible @done(21-02-04 13:25)
+    Others:
+        ✔ Add text scrolling @done(21-02-04 13:32)
+        ✔ Add abilty for multiple speakers @done(21-02-04 13:33)
+        ✘ Add voice acting @cancelled(21-02-06 17:53)
+        ✔ Add Characters @done(21-02-07 18:18)
+        ✔ Add a system for branching paths @done(21-02-06 14:15)

@@ -48,10 +48,14 @@
   background-color: rgba(228, 148, 188, 0.897);
 }
 
+.char {
+  height: 100vh;
+}
+
 body main {
   width: 100vw;
   height: 100vh;
-  background-image: url("../images/backgrounds/anime-house-bg.png");
+  background-image: url("../images/backgrounds/bedroom.png");
   background-size: cover;
 }
 
@@ -173,5 +177,23 @@ body main article .choice-box {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+body main article .character-box {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1 / 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 /*# sourceMappingURL=visual.css.map */

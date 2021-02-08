@@ -59,8 +59,6 @@ const SCRIPT = {
     /speaker Mom/Don't forget your breakfast, honey! I don't want you to be hungry on your first day of school!
     /speaker You/Okay Mom!
     /background house.png//speaker Thoughts/I can't belive I am almost late on my first day of school!
-    I want to make new friends at my new highschool, and maybe even find a cute boy to date. I can only hope, I guess.
-    Nevermind that! I'm gonna be late if I don't hurry
     /background school.png/*Whew* I made it on time. The bell is going to ring soon, I best get going.
     I hope I didn't forget anyhting at home.
     /background hallway.png/Where am I? I need to find a map or something.
@@ -69,9 +67,10 @@ const SCRIPT = {
     /speaker Yuri/That would be just down the hall, around the coner, and the first door on the left.
     /speaker You/Thank you so much, I don't want to be late for class! I'll be off now! Thanks again for your help!
     /speaker Yuri/Of course`,
-    NO_HELP: `/speaker You/No thank you, I can handle this by myself
-    /speaker Yuri/Oh, sorry. I-I didn't mean to bother or anything
-    /speaker You/Don't worry about it`,
+    NO_HELP: `/speaker You/No thank you, I can handle this by myself.
+    /speaker Yuri/Oh, sorry. I-I didn't mean to bother or anything!
+    /speaker You/Don't worry about it.
+    /spawn //background classroom.png//speaker Thoughts/See? I found it all on my own. I don't need anyones help.`,
     CLASSROOM: `/spawn //background classroom.png//speaker Thoughts/My goodness, there is a lot of people in here. I starting to get a little nervous.
     I hope none of them are staring at me, that would be just awful.
     They are staring at me aren't they? I can feel their peering eyes all over my body.
@@ -83,9 +82,41 @@ const SCRIPT = {
     and that she does some amazing work on her instagram: divine_bunny. Please check her out! Anyway, back to it!
     /speaker Nixon/Hey, are you okay?
     /speaker You/Oh! Yes, sorry I was spacing out and yes I am new here.
+    /speaker Thoughts/It felt like I just went through an ad, thats strange.
     /speaker Nixon/Thats cool. I'm Nixon, Richard Nixon that is. Nice to meet you.
     /speaker You/Nice to meet you, Nixon.
-    /audio bell.mp3/`,
+    /audio bell.mp3/
+    Oh, I guess it's time for class to start, we better take our seats.
+    /speaker Nixon/You're right.
+    I'll talk to you later, okay?
+    /speaker You/Okay!
+    /spawn //speaker Thoughts/I'm less nervous now, but my heart still hurts. What is going on?
+    He's cute, like really cute. I think he would make a good pope.
+    What am I thinking? I need to sit down before the teacher comes in here.
+    /spawn teacher.png//speaker Teacher/Okay class, lets get started.
+    Looks like we have a new student,
+    could you come up to the front of the class and introduce yourself?
+    /speaker You/Sure.
+    My name is...
+    /speaker Thoughts/Oh crap, I forgot my name I'm so nervous!
+    What is my name again?`,
+    I_FORGOT1: `/speaker You/My name is ███████, it is nice to meet you all!`,
+    I_FORGOT2: `/speaker Thoughts/*Whew* I that was nerveracking!
+    /speaker Teacher/Thank you, now, go pick an empty seat somewhere. I don't care where.
+    /spawn nixon.png//speaker Nixon/Hey! You can sit next to me!
+    /speaker Thoughts/Should, I accept his offer?
+    He's cute, but I don't know anything about him!
+    He could be a crook for all I know.`,
+    ACCEPT_OFFER: `/speaker You/Sure!
+    /speaker Thoughts/I don't know what compeled me to do it, but I said yes.
+    I don't know if it was the right choice or not, but I guess only time will tell.
+    /speaker Nixon/Yay! Take a seat right here!
+    /speaker You/Okay!`,
+    REFUSE_OFFER: `/Speaker You/No.. thanks for offering, though.
+    /speaker Thoughts/Gosh! Why did I say that? Now he looks all sad. I hope I didn't hurt his feelings.
+    Man, the people around him are laughing at him, I feel really bad now.
+    Whatever, can't change anything now unless I want to replay the whole story again.
+    I guess I'll just take the seat in the back next to the window.`,
 };
 
 const REFERENCES = [
@@ -93,6 +124,12 @@ const REFERENCES = [
     new Reference("Yes, I'm a little lost", 1, 0, SCRIPT.HELP),
     new Reference("No, I can handle this myself", 2, 0, SCRIPT.NO_HELP),
     new Reference("_classroom", 3, [1, 2], SCRIPT.CLASSROOM),
+    new Reference("I forgot", 4, 3, SCRIPT.I_FORGOT1),
+    new Reference("to implement", 5, 3, SCRIPT.I_FORGOT1),
+    new Reference("this feauture", 6, 3, SCRIPT.I_FORGOT1),
+    new Reference("_joinName", 7, [6, 5, 4], SCRIPT.I_FORGOT2),
+    new Reference("Sure", 8, 7, SCRIPT.ACCEPT_OFFER),
+    new Reference("No thanks", 9, 7, SCRIPT.REFUSE_OFFER),
 ];
 
 let treeRoot;
